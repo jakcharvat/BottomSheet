@@ -12,11 +12,11 @@
 		DE6A157124A9F33A00EAD9AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6A157024A9F33A00EAD9AE /* Assets.xcassets */; };
 		DE6A157424A9F33A00EAD9AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6A157324A9F33A00EAD9AE /* Preview Assets.xcassets */; };
 		DE6A157C24A9F46C00EAD9AE /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A157B24A9F46C00EAD9AE /* MapView.swift */; };
-		DE6A158024A9F4A300EAD9AE /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A157F24A9F4A300EAD9AE /* VisualEffectView.swift */; };
 		DE6A158224A9F4B700EAD9AE /* OverlayContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A158124A9F4B700EAD9AE /* OverlayContent.swift */; };
 		DE6A158424A9F4CD00EAD9AE /* BottomSheetAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A158324A9F4CD00EAD9AE /* BottomSheetAnchor.swift */; };
 		DE6A158624A9F4E700EAD9AE /* BottomSheetScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A158524A9F4E700EAD9AE /* BottomSheetScrollView.swift */; };
 		DE6A158824A9F4FA00EAD9AE /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A158724A9F4FA00EAD9AE /* BottomSheet.swift */; };
+		DE6A158C24A9FB4B00EAD9AE /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A157F24A9F4A300EAD9AE /* VisualEffectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,14 +64,10 @@
 		DE6A156B24A9F33900EAD9AE /* SwiftUIBottomSheet */ = {
 			isa = PBXGroup;
 			children = (
+				DE6A158924A9FAD900EAD9AE /* New Group */,
 				DE6A156C24A9F33900EAD9AE /* SwiftUIBottomSheetApp.swift */,
-				DE6A156E24A9F33900EAD9AE /* ContentView.swift */,
-				DE6A158724A9F4FA00EAD9AE /* BottomSheet.swift */,
-				DE6A158524A9F4E700EAD9AE /* BottomSheetScrollView.swift */,
-				DE6A158324A9F4CD00EAD9AE /* BottomSheetAnchor.swift */,
-				DE6A158124A9F4B700EAD9AE /* OverlayContent.swift */,
-				DE6A157F24A9F4A300EAD9AE /* VisualEffectView.swift */,
-				DE6A157B24A9F46C00EAD9AE /* MapView.swift */,
+				DE6A158B24A9FB0200EAD9AE /* src */,
+				DE6A158D24A9FB5F00EAD9AE /* example */,
 				DE6A157024A9F33A00EAD9AE /* Assets.xcassets */,
 				DE6A157524A9F33A00EAD9AE /* Info.plist */,
 				DE6A157224A9F33A00EAD9AE /* Preview Content */,
@@ -85,6 +81,34 @@
 				DE6A157324A9F33A00EAD9AE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DE6A158924A9FAD900EAD9AE /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		DE6A158B24A9FB0200EAD9AE /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DE6A158724A9F4FA00EAD9AE /* BottomSheet.swift */,
+				DE6A158524A9F4E700EAD9AE /* BottomSheetScrollView.swift */,
+				DE6A158324A9F4CD00EAD9AE /* BottomSheetAnchor.swift */,
+				DE6A157F24A9F4A300EAD9AE /* VisualEffectView.swift */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		DE6A158D24A9FB5F00EAD9AE /* example */ = {
+			isa = PBXGroup;
+			children = (
+				DE6A156E24A9F33900EAD9AE /* ContentView.swift */,
+				DE6A157B24A9F46C00EAD9AE /* MapView.swift */,
+				DE6A158124A9F4B700EAD9AE /* OverlayContent.swift */,
+			);
+			path = example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,9 +183,9 @@
 				DE6A156F24A9F33900EAD9AE /* ContentView.swift in Sources */,
 				DE6A158224A9F4B700EAD9AE /* OverlayContent.swift in Sources */,
 				DE6A158824A9F4FA00EAD9AE /* BottomSheet.swift in Sources */,
-				DE6A158024A9F4A300EAD9AE /* VisualEffectView.swift in Sources */,
 				DE6A158424A9F4CD00EAD9AE /* BottomSheetAnchor.swift in Sources */,
 				DE6A157C24A9F46C00EAD9AE /* MapView.swift in Sources */,
+				DE6A158C24A9FB4B00EAD9AE /* VisualEffectView.swift in Sources */,
 				DE6A158624A9F4E700EAD9AE /* BottomSheetScrollView.swift in Sources */,
 				DE6A156D24A9F33900EAD9AE /* SwiftUIBottomSheetApp.swift in Sources */,
 			);

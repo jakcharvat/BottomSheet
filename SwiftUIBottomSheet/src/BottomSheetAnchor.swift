@@ -66,6 +66,10 @@ extension BottomSheetAnchorContainer where KeyType == BottomSheetDefaultAnchorKe
 struct BottomSheetAnchor<KeyType>: View where KeyType: BottomSheetAnchorKey {
     let keyType: KeyType.Type
     
+    init(key keyType: KeyType.Type) {
+        self.keyType = keyType
+    }
+    
     var body: some View {
         Color.clear
             .frame(width: 0, height: 0)

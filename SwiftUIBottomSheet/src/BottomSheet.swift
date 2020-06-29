@@ -182,7 +182,7 @@ struct BottomSheet<MainContent, HeaderContent, KeyType>: View where MainContent:
 
 extension BottomSheet where HeaderContent == Text, KeyType == BottomSheetDefaultAnchorKey {
     //MARK: Title and content
-    /// Initializes a bottom sheet with the given title string and content.
+    /// This initializer creates an instance of the `BottomSheet` struct with the given title string and content.
     ///
     /// You can use the `BottomSheetAnchor` elements with no custom key inside the content to define stops for the bottom sheet (the bottom sheet will stop at the height needed to make the anchor just visible).
     ///
@@ -190,7 +190,7 @@ extension BottomSheet where HeaderContent == Text, KeyType == BottomSheetDefault
     ///
     /// To avoid the clash it's recommended to use the `init(title:key:content:)` initializer, providing a custom key to uniquely identify the anchors belonging to this `BottomSheet` instance. You must then pass the same key to all the `BottomSheetAnchor` elements used within this sheet.
     /// - Parameters:
-    ///   - title: The title of the sheet
+    ///   - title: The title to be displayed in the header of the sheet
     ///   - content: The main content of the sheet
     init(_ title: String, content: () -> MainContent) {
         self.content = content()
@@ -201,14 +201,14 @@ extension BottomSheet where HeaderContent == Text, KeyType == BottomSheetDefault
     }
     
     //MARK: Title, stops and content
-    /// Initializes a bottom sheet with the given title string, stops  and content.
+    /// This initializer creates an instance of the `BottomSheet` struct with the given title string, stops  and content.
     ///
     /// Use this initializer if you don't want to leave calculating the stop positions up to the `BottomSheet` and rather want to provide point-based values yourself. The stops represent the content heights the sheet should snap to and are specified in points from the top of the main content (excluding the title).
     /// - Parameters:
-    ///   - title: The title of the sheet
+    ///   - title: The title to be displayed in the header of the sheet
     ///   - stops: The content heights the sheet should snap to and are specified in points from the top of the main content (excluding the title)
     ///   - content: The main content of the sheet
-    init(_ title: String, stops: [CGFloat], content: @escaping () -> MainContent) {
+    init(_ title: String, stops: [CGFloat], content: () -> MainContent) {
         self.content = content()
         header = Text(title)
             .font(.title)
@@ -220,11 +220,11 @@ extension BottomSheet where HeaderContent == Text, KeyType == BottomSheetDefault
 
 extension BottomSheet where HeaderContent == Text {
     //MARK: Title, key and content
-    /// Initializes a bottom sheet with the given title string, key and content.
+    /// This initializer creates an instance of the `BottomSheet` struct with the given title string, key and content.
     ///
     /// Use this initializer to ensure multiple bottom sheets and their anchors don't clash. The key provided in this initializer be also provided in the initializers on all `BottomSheetAnchor` elements this view should use when calculating its stops.
     /// - Parameters:
-    ///   - title: The title of the sheet
+    ///   - title: The title to be displayed in the header of the sheet
     ///   - key: The key to uniquely identify the anchors belonging to this sheet
     ///   - content: The main content of the sheet
     init(_ title: String, key: KeyType.Type, content: () -> MainContent) {
@@ -238,7 +238,7 @@ extension BottomSheet where HeaderContent == Text {
 
 extension BottomSheet where KeyType == BottomSheetDefaultAnchorKey {
     //MARK: Content and header
-    /// Initializes a bottom sheet with the given content and header view.
+    /// This initializer creates an instance of the `BottomSheet` struct with the given content and header view.
     ///
     /// You can use the `BottomSheetAnchor` elements with no custom key inside the content to define stops for the bottom sheet (the bottom sheet will stop at the height needed to make the anchor just visible).
     ///
@@ -256,7 +256,7 @@ extension BottomSheet where KeyType == BottomSheetDefaultAnchorKey {
     }
     
     //MARK: Stops, content and header
-    /// Initializes a bottom sheet with the given stops, content and header view.
+    /// This initializer creates an instance of the `BottomSheet` struct with the given stops, content and header view.
     ///
     /// Use this initializer if you don't want to leave calculating the stop positions up to the `BottomSheet` and rather want to provide point-based values yourself. The stops represent the content heights the sheet should snap to and are specified in points from the top of the main content (excluding the title).
     /// - Parameters:
@@ -274,7 +274,7 @@ extension BottomSheet where KeyType == BottomSheetDefaultAnchorKey {
 
 extension BottomSheet {
     //MARK: Key, content and header
-    /// Initializes a bottom sheet with the given key, content and header view.
+    /// This initializer creates an instance of the `BottomSheet` struct with the given key, content and header view.
     ///
     /// Use this initializer to ensure multiple bottom sheets and their anchors don't clash. The key provided in this initializer be also provided in the initializers on all `BottomSheetAnchor` elements this view should use when calculating its stops.
     /// - Parameters:
