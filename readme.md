@@ -48,7 +48,7 @@ struct ContentView: View {
     }
 }
 ```
-
+![Sample App running on an iPhone 11 simulator](https://lh3.googleusercontent.com/K_CR33btTdbGoM9X3ucgokYRPgDXi8-Kpdy4fMVTwNeuMoVOKCy-4dPmfNtQduEnZ4sE_hWbTBp0ny9FBFQGnMPBu2X8KW06FTGhsWGDGeLOKkPQbKip6ucQcLFmZVQnqSmRLTEc7kU=w2400?source=screenshot.guru)
 
 
 <a name="mostlySwiftUI"></a>
