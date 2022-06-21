@@ -34,20 +34,6 @@ struct BottomSheetScrollView<Content>: View where Content: View {
     }
 }
 
-struct DraggyScrollView_Previews: PreviewProvider {
-    static var previews: some View {
-        BottomSheetScrollView(contentHeight: .constant(200), contentOffset: 10) {
-            VStack {
-                ForEach(0..<100) { index in
-                    Text("Row \(index)")
-                        .frame(height: 40)
-                }
-            }
-            .frame(maxWidth: .infinity)
-        }
-    }
-}
-
 
 //MARK: - Intrinsic Height
 struct ContentHeightKey: PreferenceKey {

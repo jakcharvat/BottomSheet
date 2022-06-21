@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct DraggyThingyState {
+struct BottomSheetState {
     /// The current height of the sheet
     var containerHeight: CGFloat = -1
     /// The height of the sheet before the start of the latest drag, used for animation purposes
@@ -31,7 +31,7 @@ struct DraggyThingyState {
 }
 
 
-struct BottomSheet<MainContent, HeaderContent, KeyType>: View where MainContent: View, HeaderContent: View, KeyType: BottomSheetAnchorKey, KeyType.Value == [CGPoint] {
+public struct BottomSheet<MainContent, HeaderContent, KeyType>: View where MainContent: View, HeaderContent: View, KeyType: BottomSheetAnchorKey, KeyType.Value == [CGPoint] {
     private let content: MainContent
     private let header: HeaderContent
     private let keyType: KeyType.Type
@@ -48,11 +48,11 @@ struct BottomSheet<MainContent, HeaderContent, KeyType>: View where MainContent:
     
     private init() { fatalError("Don't use") }
     
-    @State private var state = DraggyThingyState()
+    @State private var state = BottomSheetState()
     
     
     //MARK: Body
-    var body: some View {
+    public var body: some View {
         GeometryReader { (proxy: GeometryProxy) in
             VStack(spacing: 0) {
                 Group {
@@ -177,10 +177,7 @@ struct BottomSheet<MainContent, HeaderContent, KeyType>: View where MainContent:
 
 
 //MARK: - Initializers
-
-
-
-extension BottomSheet where HeaderContent == Text, KeyType == BottomSheetDefaultAnchorKey {
+public extension BottomSheet where HeaderContent == Text, KeyType == BottomSheetDefaultAnchorKey {
     //MARK: Title and content
     /// This initializer creates an instance of the `BottomSheet` struct with the given title string and content.
     ///
@@ -218,7 +215,7 @@ extension BottomSheet where HeaderContent == Text, KeyType == BottomSheetDefault
     }
 }
 
-extension BottomSheet where HeaderContent == Text {
+public extension BottomSheet where HeaderContent == Text {
     //MARK: Title, key and content
     /// This initializer creates an instance of the `BottomSheet` struct with the given title string, key and content.
     ///
@@ -236,7 +233,7 @@ extension BottomSheet where HeaderContent == Text {
     }
 }
 
-extension BottomSheet where KeyType == BottomSheetDefaultAnchorKey {
+public extension BottomSheet where KeyType == BottomSheetDefaultAnchorKey {
     //MARK: Content and header
     /// This initializer creates an instance of the `BottomSheet` struct with the given content and header view.
     ///
@@ -272,7 +269,7 @@ extension BottomSheet where KeyType == BottomSheetDefaultAnchorKey {
     }
 }
 
-extension BottomSheet {
+public extension BottomSheet {
     //MARK: Key, content and header
     /// This initializer creates an instance of the `BottomSheet` struct with the given key, content and header view.
     ///

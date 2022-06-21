@@ -63,14 +63,14 @@ extension BottomSheetAnchorContainer where KeyType == BottomSheetDefaultAnchorKe
 
 
 //MARK: - Anchor
-struct BottomSheetAnchor<KeyType>: View where KeyType: BottomSheetAnchorKey {
+public struct BottomSheetAnchor<KeyType>: View where KeyType: BottomSheetAnchorKey {
     let keyType: KeyType.Type
     
-    init(key keyType: KeyType.Type) {
+    public init(key keyType: KeyType.Type) {
         self.keyType = keyType
     }
     
-    var body: some View {
+    public var body: some View {
         Color.clear
             .frame(width: 0, height: 0)
             .background(GeometryReader { (proxy: GeometryProxy) in
@@ -79,7 +79,7 @@ struct BottomSheetAnchor<KeyType>: View where KeyType: BottomSheetAnchorKey {
     }
 }
 
-extension BottomSheetAnchor where KeyType == BottomSheetDefaultAnchorKey {
+public extension BottomSheetAnchor where KeyType == BottomSheetDefaultAnchorKey {
     init() {
         keyType = BottomSheetDefaultAnchorKey.self
     }
@@ -133,13 +133,13 @@ extension BottomSheetAnchor {
 
 
 //MARK: - Anchor Keys
-protocol BottomSheetAnchorKey: PreferenceKey {}
+public protocol BottomSheetAnchorKey: PreferenceKey {}
 extension BottomSheetAnchorKey {
-    static var defaultValue: [CGPoint] { [] }
+    public static var defaultValue: [CGPoint] { [] }
     
-    static func reduce(value: inout [CGPoint], nextValue: () -> [CGPoint]) {
+    public static func reduce(value: inout [CGPoint], nextValue: () -> [CGPoint]) {
         value += nextValue()
     }
 }
 
-struct BottomSheetDefaultAnchorKey: BottomSheetAnchorKey { }
+public struct BottomSheetDefaultAnchorKey: BottomSheetAnchorKey { }
